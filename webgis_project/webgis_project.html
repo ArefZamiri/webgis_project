@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aref's Final WebGIS Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css">
+    <link rel="stylesheet" href="webgis_project.css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=YOUR_BING_MAPS_KEY' async defer></script>
+</head>
+<body>
+    <div id="map" class="map"></div>
+    <div id="bingMap" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;"></div>
+    <div id="info"></div>
+    <div id="layerSwitcher">
+        <h3>Base Layers:</h3>
+        <input type="radio" name="baseLayer" value="OSM" checked> OSM
+        <input type="radio" name="baseLayer" value="CARTO"> CARTO
+        <input type="radio" name="baseLayer" value="Bing"> Bing
+        <h3>Thematic Layers:</h3>
+        <input type="checkbox" id="iranProvincesCheck" checked> Iran Provinces
+        <input type="checkbox" id="iranCountiesCheck" checked> Iran Counties
+    </div>
+
+    <script src="webgis_project.js"></script>
+</body>
+</html>
